@@ -29,6 +29,8 @@ Bank {
 */
 import Foundation
 
+// fileprivate struct class var let enum
+
 struct Address: Codable {
     let country: String
     let city: String
@@ -69,7 +71,6 @@ let x: Country = .eu
 let y: Gender = Gender(rawValue: "male")!
 
 
-
 struct User: Codable {
     let id: String
     let name: String
@@ -78,61 +79,6 @@ struct User: Codable {
     let email: String
     let phone: Phone
     let address: Address
-}
-protocol Storage {
-    func set(data: Data, key: String)
-    func getData(key: String) -> Data?
-}
-
-class UserDef: Storage { //
-    var user = UserDefaults.standard
-    
-    func set(data: Data, key: String) {
-        user.set(data, forKey: key)
-    }
-    func getData(key: String) -> Data? {
-        return user.data(forKey: key)
-    }
-}
-
-//File manager
-class FileManag: Storage {
-    var val = FileManager.default
-    
-    func set(data: Data, key: String) {
-        val.createFile(atPath: key, contents: data)
-    }
-    func getData(key: String) -> Data? {
-        return val.contents(atPath: key)
-        
-    }
-}
-
-// Dictionary - InMemoryStorage
-class InMemoryStorage: Storage {
-    var dictionary: [String: Data] = [:]
-
-    func set(data: Data, key: String) {
-        dictionary[key] = data
-    }
-    
-    func getData(key: String) -> Data? {
-        return dictionary[key]
-    }
-}
-
-class StoragesAssembly {
-    var inMemory: Storage {
-        return InMemoryStorage()
-    }
-    
-    var userDefaults: Storage {
-        return UserDef()
-    }
-    
-    var filesystemStorage: Storage {
-        return FileManag()
-    }
 }
 
 
@@ -394,3 +340,15 @@ print("prod2 string: \(str2)")
     func createDepositProduct(user: User) -> Product
     func createCreditProduct(user: User) -> Product
  */
+//import Bank
+
+let assembly1 = BankAssembly()
+let bank = assembly1.bank
+
+let client = bank.createClient(name: "Сергей", secondName: "Дмитриевич", lastName: "Полуэктов", email: "sdr@mail.ru", phone: Phone(countryCode: 7, numberPhone: 9034532112), address: Address(country: "Россия", city: "Москва", street: "Героев Подшипников", house: "1к4", flat: 1, floor: 1))
+let creditProduct = bank.createCreditProduct(user: client)
+
+
+//
+//let storage1 = StoragesAssembly().filesystemStorage
+//let bank2 = assembly1.bank(with: storage1)

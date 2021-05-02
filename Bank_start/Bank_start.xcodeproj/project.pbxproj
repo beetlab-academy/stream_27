@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		113B15282635782B00CDB223 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113B15272635782B00CDB223 /* main.swift */; };
+		115AF76A263EAF1600BB1C66 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AF769263EAF1600BB1C66 /* Storage.swift */; };
+		115AF76E263EAF3600BB1C66 /* StoragesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AF76D263EAF3600BB1C66 /* StoragesAssembly.swift */; };
+		115AF772263EAF5E00BB1C66 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AF771263EAF5E00BB1C66 /* Bank.swift */; };
+		115AF776263EB4EB00BB1C66 /* BankAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AF775263EB4EB00BB1C66 /* BankAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		113B15242635782B00CDB223 /* Bank_start */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Bank_start; sourceTree = BUILT_PRODUCTS_DIR; };
 		113B15272635782B00CDB223 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		115AF769263EAF1600BB1C66 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		115AF76D263EAF3600BB1C66 /* StoragesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragesAssembly.swift; sourceTree = "<group>"; };
+		115AF771263EAF5E00BB1C66 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		115AF775263EB4EB00BB1C66 /* BankAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,29 @@
 		113B15262635782B00CDB223 /* Bank_start */ = {
 			isa = PBXGroup;
 			children = (
+				115AF770263EAF5500BB1C66 /* Bank */,
+				115AF768263EAF0600BB1C66 /* Storages */,
 				113B15272635782B00CDB223 /* main.swift */,
 			);
 			path = Bank_start;
+			sourceTree = "<group>";
+		};
+		115AF768263EAF0600BB1C66 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				115AF769263EAF1600BB1C66 /* Storage.swift */,
+				115AF76D263EAF3600BB1C66 /* StoragesAssembly.swift */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
+		115AF770263EAF5500BB1C66 /* Bank */ = {
+			isa = PBXGroup;
+			children = (
+				115AF771263EAF5E00BB1C66 /* Bank.swift */,
+				115AF775263EB4EB00BB1C66 /* BankAssembly.swift */,
+			);
+			path = Bank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115AF76E263EAF3600BB1C66 /* StoragesAssembly.swift in Sources */,
+				115AF772263EAF5E00BB1C66 /* Bank.swift in Sources */,
+				115AF776263EB4EB00BB1C66 /* BankAssembly.swift in Sources */,
 				113B15282635782B00CDB223 /* main.swift in Sources */,
+				115AF76A263EAF1600BB1C66 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
