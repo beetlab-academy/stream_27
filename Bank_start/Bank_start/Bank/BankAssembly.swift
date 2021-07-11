@@ -7,14 +7,14 @@
 
 import Foundation
 
-public class BankAssembly {
+class BankAssembly {
     let storagesAssembly = StoragesAssembly()
     
-    public var bank: Bank {
+    var bank: Bank {
         return BankImpl(storage: storagesAssembly.userDefaults)
     }
     
-    public var inMemoryBank: Bank {
+    var inMemoryBank: Bank {
         return BankImpl(storage: storagesAssembly.inMemory)
     }
     
