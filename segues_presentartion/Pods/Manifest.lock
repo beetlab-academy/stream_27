@@ -1,0 +1,16 @@
+PODS:
+  - EasyDi (1.6.1)
+
+DEPENDENCIES:
+  - EasyDi
+
+SPEC REPOS:
+  trunk:
+    - EasyDi
+
+SPEC CHECKSUMS:
+  EasyDi: 3d7d4c0d3ad2d78b3ff22d4755590d32945f69cc
+
+PODFILE CHECKSUM: 9250a20038844e23bf1f92efacbf87aa5e300bb7
+
+COCOAPODS: 1.10.1
